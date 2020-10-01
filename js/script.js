@@ -70,6 +70,10 @@ const quotes = [
 ***/
 
 function getRandomQuote() {
+    // get length of quotes array 
+    // generate random # from 0 up to & including length-1
+    // index quotes array using random # from above line
+    // return random quote object 
 
     return '';
 }
