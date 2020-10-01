@@ -19,7 +19,9 @@ const quotes = [
   },
   {
       quote: "Get busy living or get busy dying",
-      source: "Stephen King"
+      source: "Andy Dufresne",
+      citation: "The Shawshank Redemption",
+      year: 1994
   },
   {
       quote: "Twenty years from now you will be more disappointed by the things that you didn’t do than by the ones you did do",
