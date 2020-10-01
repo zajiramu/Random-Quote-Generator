@@ -71,11 +71,12 @@ const quotes = [
 
 function getRandomQuote() {
     // get length of quotes array 
+    let quotesLength = quotes.length;
     // generate random # from 0 up to & including length-1
-    // index quotes array using random # from above line
-    // return random quote object 
-
-    return '';
+    let randInt = Math.floor( Math.random() * quotesLength );
+    // index quotes array using random int from above line
+    // and return random quote object 
+    return quotes[randInt].quote;
 }
 
 
@@ -84,6 +85,7 @@ function getRandomQuote() {
 ***/
 
 function printQuote() {
+    console.log(getRandomQuote());
     // set randQuote to random quote object returned by calling function getRandomQuote
     // create initial quote HTML string literal for displaying the quote on the webpage
     // if random quote object has a citation property 
