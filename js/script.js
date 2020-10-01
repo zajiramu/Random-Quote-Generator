@@ -76,7 +76,7 @@ function getRandomQuote() {
     let randInt = Math.floor( Math.random() * quotesLength );
     // index quotes array using random int from above line
     // and return random quote object 
-    return quotes[randInt].quote;
+    return quotes[randInt];
 }
 
 
@@ -85,17 +85,29 @@ function getRandomQuote() {
 ***/
 
 function printQuote() {
-    console.log(getRandomQuote());
     // set randQuote to random quote object returned by calling function getRandomQuote
+    const randQuote = getRandomQuote();
     // create initial quote HTML string literal for displaying the quote on the webpage
+    let quoteHTML = `<p class = "quote">${randQuote.quote}</p>
+                     <p class = "source">${randQuote.source}`;
     // if random quote object has a citation property 
-        // modify HTML string to include the citation 
+    if(randQuote.citation) {
+        // modify quote HTML string literal to include the citation 
+        quoteHTML += `<span class="citation">${randQuote.citation}</span>`;
+    }   
     // endif
     // if random quote object has a year property 
-        // modify HTML string to include the year 
+    if(randQuote.year) {
+        // modify quote HTML string literal to include the year
+        quoteHTML += `<span class="year">${randQuote.year}</span>`; 
+    }
     // endif
+    // finish creating quote HTML string literal; add closing 'p' tag
+    quoteHTML += `</p>`;
     // set quoteDiv to the HTML div element object that'll contain the quote 
+    let quoteDiv = document.getElementById('quote-box');
     // set innerHTML property of quoteDiv to the HTML quote string literal above 
+    quoteDiv.innerHTML = quoteHTML;
 }
 
 
