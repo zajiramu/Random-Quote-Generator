@@ -83,6 +83,19 @@ function getRandomQuote() {
  * `printQuote` function
 ***/
 
+function printQuote() {
+    // set randQuote to random quote object returned by calling function getRandomQuote
+    // create initial quote HTML string literal for displaying the quote on the webpage
+    // if random quote object has a citation property 
+        // modify HTML string to include the citation 
+    // endif
+    // if random quote object has a year property 
+        // modify HTML string to include the year 
+    // endif
+    // set quoteDiv to the HTML div element object that'll contain the quote 
+    // set innerHTML property of quoteDiv to the HTML quote string literal above 
+}
+
 
 
 /***
