@@ -67,6 +67,10 @@ const quotes = [
  * `getRandomQuote` function
 ***/
 
+function getRandomQuote() {
+
+    return '';
+}
 
 
 /***
