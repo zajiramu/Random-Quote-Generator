@@ -117,7 +117,25 @@ function printQuote() {
     quoteDiv.innerHTML = quoteHTML;
 }
 
+/***
+ * 'getRandomColor' function
+ *  generates and returns a random CSS hex color value
+ *  for e.g. #FFF011
+***/
 
+function getRandomColor() {
+
+}
+
+/***
+ * 'refreshQuote' function
+ *  refreshes the page to display a random quote from the quotes objects array
+ *  every 3 seconds regardless of if the 'Show another quote' button is clicked 
+***/
+
+function refreshQuote() {
+
+}
 
 /***
  * click event listener for the print quote button
