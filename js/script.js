@@ -67,6 +67,9 @@ const quotes = [
 
 /***
  * `getRandomQuote` function
+ *  generates a random int between 0 and length-1 
+ *  where length is the length of the quotes array 
+ *  and uses this int to index, retrieve, and return a quote object 
 ***/
 
 function getRandomQuote() {
@@ -82,6 +85,10 @@ function getRandomQuote() {
 
 /***
  * `printQuote` function
+ *  calls getRandomQuote to get a random quote object
+ *  and builds a string literal of HTML using the returned quote object
+ *  appends the built HTML string literal to the document so that it can be displayed
+ *  on the page
 ***/
 
 function printQuote() {
@@ -114,7 +121,7 @@ function printQuote() {
 
 /***
  * click event listener for the print quote button
- * DO NOT CHANGE THE CODE BELOW!!
+ * uses printQuote as event handler function
 ***/
 
 document.getElementById('load-quote').addEventListener("click", printQuote, false);
