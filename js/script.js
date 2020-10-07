@@ -148,6 +148,11 @@ function refreshQuote() {
     printQuote();
 }
 
+// call function setTimeOut with a 3 second (3000ms) delay as the second argument
+// and function refreshQuote as the first argument for the action to repeat
+// calls function refreshQuote after every 3 seconds
+setTimeout(refreshQuote,3000);
+
 /***
  * click event listener for the print quote button
  * uses printQuote as event handler function
