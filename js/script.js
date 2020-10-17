@@ -116,6 +116,8 @@ function printQuote() {
     let quoteDiv = document.getElementById('quote-box');
     // set innerHTML property of quoteDiv to the HTML quote string literal above 
     quoteDiv.innerHTML = quoteHTML;
+    // change the document background color to random color returned by function getRandomColor
+    document.body.style.backgroundColor = getRandomColor();
 }
 
 // call function setInterval with a 4 second (4000 ms) delay as the second argument
