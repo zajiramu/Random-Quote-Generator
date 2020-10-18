@@ -33,7 +33,8 @@ const quotes = [
   },
   {
       quote: "It is hard to fail, but it is worse never to have tried to succeed",
-      source: "Theodore Roosevelt"
+      source: "Theodore Roosevelt",
+      tags: ['motivation', 'inspiration', 'good advice']
   },
   {
       quote: "If you want to live a happy life, tie it to a goal, not to people or things",
@@ -108,6 +109,13 @@ function printQuote() {
     if(randQuote.year) {
         // modify quote HTML string literal to include the year
         quoteHTML += `<span class="year">${randQuote.year}</span>`; 
+    }
+    // endif
+    // if random quote object has a tags property
+    if(randQuote.tags) {
+        for(let i = 0; i < randQuote.tags.length; i++) {
+            quoteHTML += `<br><span class="source">${randQuote.tags[i]}</span>`;
+        }
     }
     // endif
     // finish creating quote HTML string literal; add closing 'p' tag
