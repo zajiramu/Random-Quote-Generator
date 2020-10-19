@@ -15,7 +15,8 @@ Project 1 - A Random Quote Generator
 const quotes = [
   {
       quote: "You know you’re in love when you can’t fall asleep because reality is finally better than your dreams",
-      source: "Dr. Seuss"
+      source: "Dr. Seuss",
+      tags: "(motivation, inspiration, good advice)"
   },
   {
       quote: "Get busy living or get busy dying",
@@ -25,16 +26,18 @@ const quotes = [
   },
   {
       quote: "Twenty years from now you will be more disappointed by the things that you didn’t do than by the ones you did do",
-      source: "Mark Twain"
+      source: "Mark Twain",
+      tags: "(motivation, inspiration, good advice)"
   },
   {
       quote: "Those who dare to fail miserably can achieve greatly",
-      source: "John F. Kennedy"
+      source: "John F. Kennedy",
+      tags: "(motivation, inspiration, good advice)"
   },
   {
       quote: "It is hard to fail, but it is worse never to have tried to succeed",
       source: "Theodore Roosevelt",
-      tags: ['motivation', 'inspiration', 'good advice']
+      tags: "(motivation, inspiration, good advice)"
   },
   {
       quote: "If you want to live a happy life, tie it to a goal, not to people or things",
@@ -50,7 +53,8 @@ const quotes = [
   },
   {
       quote: "The successful warrior is the average man, with laser-like focus",
-      source: "Ray Bradbury"
+      source: "Ray Bradbury",
+      tags: "(motivation, inspiration, good advice)"
   },
   {
       quote: "Yesterday is history, tomorrow is a mystery, today is a gift of God, which is why we call it the present",
@@ -58,7 +62,8 @@ const quotes = [
   },
   {
       quote: "You miss 100 percent of the shots you never take",
-      source: "Wayne Gretzky"
+      source: "Wayne Gretzky",
+      tags: "(motivation, inspiration, good advice)"
   },
   {
       quote: "The whole secret of a successful life is to find out what is one’s destiny to do, and then do it",
@@ -113,9 +118,7 @@ function printQuote() {
     // endif
     // if random quote object has a tags property
     if(randQuote.tags) {
-        for(let i = 0; i < randQuote.tags.length; i++) {
-            quoteHTML += `<br><span class="source">${randQuote.tags[i]}</span>`;
-        }
+            quoteHTML += `<br><span>${randQuote.tags}</span>`;
     }
     // endif
     // finish creating quote HTML string literal; add closing 'p' tag
